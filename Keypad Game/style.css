@@ -1,0 +1,304 @@
+html {
+    width:100%;
+    height:100%;
+    }
+    body {
+    overflow:hidden;
+    -webkit-user-select: none;
+           -moz-user-select: none;
+           -ms-user-select: none;
+           user-select: none;
+    margin:0;
+    background-color:black;
+    background:radial-gradient(#7a1f1f,black);
+    width:100%;
+    height:100%;
+    }
+      #keypad {
+    transform-style:preserve-3d;
+    width:200px;
+    height:300px;
+    background-color:transparent;
+    color:white;
+    position:absolute;
+    top:0;
+    right:0;
+    bottom:0;
+    left:0;
+    margin:auto;
+    animation-name:observex;
+    animation-duration:6s;
+    animation-timing-function:linear;
+    animation-iteration-count:infinite;
+    transition:all .5s;
+    }
+    @keyframes observe {
+    from {
+    transform:rotate3d(0,0,0, 0deg);
+    }
+    to {
+    transform:rotate3d(1,1,1, 360deg);
+    }
+    }
+    #keypad div {
+    position:absolute;
+    }
+    .front {
+    width:200px;
+    height:300px;
+    background-color:#bfbfbf;
+    transform:translateZ(50px) rotateX(0deg);
+    transform-style:preserve-3d;
+    }
+    .back {
+    width:200px;
+    height:300px;
+    background-color:#666666;
+    transform:translateZ(50px) rotateX(180deg);
+    }
+    .left {
+    width:50px;
+    height:300px;
+    background-color:#a6a6a6;
+    transform:translateZ(25px) translateX(-25px) rotateY(90deg);
+    }
+    .right {
+    width:50px;
+    height:300px;
+    background-color:#b3b3b3;
+    transform:translateZ(25px) translateX(175px) rotateY(-90deg);
+    }
+    .top {
+    width:200px;
+    height:50px;
+    background-color:#a6a6a6;
+    transform:translateZ(25px) translateY(-25px) rotateX(90deg);
+    }
+    .bottom {
+    width:200px;
+    height:50px;
+    background-color:#b3b3b3;
+    transform:translateZ(25px) translateY(275px) rotateX(-90deg);
+    }
+    #move_left {
+    position:absolute;
+    height:600px;
+    width:250px;
+    background-color:transparent;
+    top:0;
+    right:0;
+    left:-500px;
+    bottom:0;
+    margin:auto;
+    }
+    #move_left:hover ~ #keypad {
+    transform:rotateY(40deg);
+    }
+    #move_right {
+    position:absolute;
+    height:600px;
+    width:250px;
+    background-color:transparent;
+    top:0;
+    right:0;
+    left:500px;
+    bottom:0;
+    margin:auto;
+    }
+    #move_right:hover ~ #keypad {
+    transform:rotateY(-40deg);
+    }
+    #move_up {
+    position:absolute;
+    height:250px;
+    width:400px;
+    background-color:transparent;
+    top:0;
+    right:0;
+    left:0;
+    bottom:600px;
+    margin:auto;
+    }
+    #move_up:hover ~ #keypad {
+    transform:rotateX(-35deg);
+    }
+    #move_down {
+    position:absolute;
+    height:250px;
+    width:400px;
+    background-color:transparent;
+    top:0;
+    right:0;
+    left:0;
+    bottom:-600px;
+    margin:auto;
+    }
+    #move_down:hover ~ #keypad {
+    transform:rotateX(35deg);
+    }
+    #button {
+    transform-style:preserve-3d;
+    width:50px;
+    height:50px;
+    margin:auto;
+    position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    bottom:0;
+    transition:all .5s;
+    transform:translateZ(-10px);
+    color:#0000cc;
+    text-align:center;
+    font-size:30px;
+    line-height:175%;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    }
+    #button:active {
+    transform:translateZ(-15px);
+    }
+    #button div {
+    width:50px;
+    height:50px;
+    background-color:#4d4dff;
+    }
+    .b_front { transform:rotateY(0) translateZ(25px); }
+    .b_back { transform:rotateX(180deg) translateZ(25px); }
+    .b_left { transform:rotateY(90deg) translateZ(25px); }
+    .b_right { transform:rotateY(-90deg) translateZ(25px); }
+    .b_back { transform:rotateX(90deg) translateZ(25px); }
+    .b_top { transform:rotateX(-90deg) translateZ(25px); }
+   
+    .front button {
+    width:50px;
+    height:20px;
+    background-color:#00b300;
+    outline:none;
+    border:none;
+       position:absolute;
+    top:0;
+    right:0;
+    left:0;
+    margin:auto;
+    bottom:0;
+    color:#006600;
+    font-weight:bold;
+    font-family: 'Roboto', sans-serif;
+    transform:translateZ(1px);
+    }
+    .front button:active {
+    background-color:#b300b3;
+    color:#660066;
+    }
+    .b_front button {
+    width:100%;
+    height:100%;
+    border:none;
+    background-color:transparent;
+    color:#0000cc;
+    text-align:center;
+    font-size:30px;
+    line-height:175%;
+    font-family: 'Roboto', sans-serif;
+    font-weight:bold;
+    }
+    .b_front button:active {
+    background-color:#b300b3;
+    color:#660066;
+    }
+    form {
+    position:absolute;
+    top:-225px;
+    right:0;
+    left:0;
+    bottom:0;
+    margin:auto;
+    height:40px;
+    width:80%;
+    }
+    input {
+    height:30px;
+    outline:none;
+    border:none;
+    width:100%;
+    font-size:20px;
+    color:#00b300;
+    }
+    p {
+    color:black;
+    font-size:13px;
+    margin-left:30px;
+    display:none;
+    letter-spacing:3px;
+    }
+    #leftdoor {
+    height:100%;
+    width:50%;
+    background-color:darkgray;
+    position:absolute;
+    border-right-style:solid;
+    border-width:1px;
+    border-color:black;
+    animation-name:none;
+    animation-duration:5s;
+    animation-timing-function:linear;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    }
+    .leftdoormain {
+    width:96%;
+    position:absolute;
+    background-color:gray;
+    height:inherit;
+    }
+    #rightdoor {
+    height:100%;
+    width:50%;
+    background-color:darkgray;
+    position:absolute;
+    border-left-style:solid;
+    border-width:1px;
+    border-color:black;
+    left:50%;
+    animation-name:none;
+    animation-duration:5s;
+    animation-timing-function:linear;
+    animation-iteration-count:1;
+    animation-fill-mode:forwards;
+    }
+    .rightdoormain {
+    width:96%;
+    position:absolute;
+    background-color:gray;
+    height:inherit;
+    left:4%;
+    }
+    @keyframes dooropenleft {
+    from {
+    left:0;
+    }
+    to {
+    left:-40%;
+    }
+    }
+    @keyframes dooropenright {
+    from {
+    left:50%;
+    }
+    to {
+    left:90%;
+    }
+    }
+    span {
+    display:block;
+    margin:auto;
+    height:200px;
+    color:lightgreen;
+    font-size:100px;
+    text-align:center;
+    font-family: 'Roboto', sans-serif;
+    transform:translateY(100px);
+    z-index:-1;
+    position:relative;
+    }
